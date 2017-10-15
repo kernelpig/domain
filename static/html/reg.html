@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>域名注册</title>
+    <link rel="icon" type="image/png" href="../i/favicon.ico">
+    <meta name="keywords" content="域名注册" />
+    <meta name="Description" content="域名注册" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="../css/font-awesome.4.6.0.css"/>
+    <link rel="stylesheet" href="../css/amazeui.min.css"/>
+</head>
+
+<body>
+<div class="am-container ContentContainer">
+    <div class="am-container am-margin-top">
+        <form method="post" class="am-form" id="first_setup">
+            <fieldset>
+                <legend>注册信息</legend>
+                <div class="am-form-group">
+                    <div class="am-input-group">
+                        <span class="am-input-group-label"><i class="am-icon-user am-icon-key"></i></span>
+                        <input type="text" class="DomainListAppIdKey" required minlength="1" maxlength="64" placeholder="阿里云APP KEY ID" data-validation-message="输入标题, 必须为1~64位">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <div class="am-input-group">
+                        <span class="am-input-group-label"><i class="am-icon-user am-icon-key"></i></span>
+                        <input type="text" class="DomainListAppSecret" required minlength="1" maxlength="64" placeholder="阿里云APP KEY SECRET" data-validation-message="输入标题, 必须为1~64位">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <div class="am-input-group">
+                        <span class="am-input-group-label"><i class="am-icon-user am-icon-pencil"></i></span>
+                        <input type="text" class="DomainListTemplate" required minlength="1" maxlength="64" placeholder="域名模板" data-validation-message="输入标题, 必须为1~64位">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <textarea class="DomainListItems am-scrollable-vertical" rows="6" required placeholder="注册列表，每行一个"></textarea>
+                </div>
+                <div class="am-form-group">
+                    <input type="button" value="开始" class="am-btn am-btn-primary am-btn-sm DomainListStart">
+                    <input type="button" value="停止" class="am-btn am-btn-default am-btn-sm DomainListStop">
+                    <input type="button" value="重置" class="am-btn am-btn-default am-btn-sm DomainListReset">
+                </div><hr>
+                <div class="am-form-group">
+                    <textarea class="DomainListItems am-scrollable-vertical" rows="6" placeholder="" readonly></textarea>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+
+<script src="../js/third/jquery-1.11.1.min.js"></script>
+<script src="../js/third/amazeui.min.js"></script>
+<script src="../js/common/const.js"></script>
+<script src="../js/common/common.js"></script>
+<script src="../js/config/config.js"></script>
+<script src="../js/error/code.js"></script>
+<script src="../js/api/api.js"></script>
+<script src="../js/model/alert.js"></script>
+<script src="../js/model/navbar.js"></script>
+<script src="../js/model/footbar.js"></script>
+<script src="../js/page/reg.js"></script>
+</html>

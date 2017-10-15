@@ -1,4 +1,4 @@
 listen = ":8005"
 gomaxprocs = 1
 coroutineCount = 4
-releaseMode = true
+releaseMode = false

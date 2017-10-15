@@ -28,6 +28,7 @@ func cmdConfigHandler(config string) {
 
 func main() {
 	config := flag.String(cmdKeyConfig, "", cmdHelpConfig)
+	flag.Parse()
 
 	cmdConfigHandler(*config)
 	router := handler.ServerEngine()

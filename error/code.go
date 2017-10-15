@@ -57,11 +57,22 @@ const (
 	_SubModuleErrMin = iota
 	MConfigErr
 	MLogErr
+	MParaErr
 	MRegErr
 
 	// 注意: 请在此处增加错误码, 已废弃的请保留不要删除!
 
 	_SubModuleErrMax
+)
+
+// 参数错误
+const (
+	_ParaErrMin = iota
+	ParaBindErr
+
+	// 注意: 请在此处增加错误码, 已废弃的请保留不要删除!
+
+	_ParaErrMax
 )
 
 // 配置错误

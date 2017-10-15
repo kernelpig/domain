@@ -36,6 +36,10 @@ func init() {
 	RegList.Init()
 }
 
+func (r *RegLists) Join() string {
+	return strings.Join(r.DomainList, "\n")
+}
+
 func (r *RegLists) Set(appId, appSecret, templateId, list string) {
 	r.Lock()
 	defer r.Unlock()
@@ -67,7 +71,6 @@ func (r *RegLists) Stop() {
 	r.Lock()
 	defer r.Unlock()
 
-	close(r.DomainReqList)
 	r.Status = StatusStopped
 }
 

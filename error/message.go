@@ -14,7 +14,7 @@ func init() {
 
 func initServiceErrs() {
 	ServiceErrs = [_ServiceErrMax]string{
-		SDomain: "cunxun",
+		SDomain: "domain",
 	}
 }
 
@@ -34,6 +34,10 @@ func initSubErrors() {
 			_LogErrMin:        "Basic log error information.",
 			LogDumpRequestErr: "Dump request parameter failed.",
 		},
+		MParaErr: {
+			_ParaErrMin: "Basic para error information.",
+			ParaBindErr: "Parse parameter failed.",
+		},
 		MRegErr: {
 			_RegErrMin:  "Basic reg error information.",
 			RegStartErr: "Failed to obtain article information.",
@@ -46,6 +50,8 @@ func initSubModuleErrs() {
 		_SubModuleErrMin: "Invalid sub module", // 占位
 		MConfigErr:       "config",             // 配置错误
 		MLogErr:          "log",                // 日志错误
+		MRegErr:          "reg",                // 注册错误
+		MParaErr:         "para",               // 参数错误
 	}
 }
 

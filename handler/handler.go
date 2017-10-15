@@ -3,8 +3,8 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 
-	"wangqingang/cunxun/common"
-	"wangqingang/cunxun/middleware"
+	"wangqingang/domain/common"
+	"wangqingang/domain/middleware"
 )
 
 func ServerEngine() *gin.Engine {
@@ -21,14 +21,20 @@ func ServerEngine() *gin.Engine {
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 
+	regStaticRouter(router)
 	regRegRouter(router)
 
 	return router
 }
 
+func regStaticRouter(router *gin.Engine) {
+	group := router.Group("/")
+	group.Static("/static", "./static")
+}
+
 func regRegRouter(router *gin.Engine) {
 	group := router.Group("/api/reg")
-	group.GET("/start", RegStartHandler)
-	group.GET("/stop", RegStopHandler)
-	group.GET("/kill", RegKillHandler)
+	group.POST("/start", RegStartHandler)
+	group.POST("/stop", RegStopHandler)
+	group.GET("/", RegGetHandler)
 }

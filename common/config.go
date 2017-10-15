@@ -1,11 +1,9 @@
 package common
 
 import (
-	"time"
-
 	"github.com/BurntSushi/toml"
 
-	e "wangqingang/cunxun/error"
+	e "wangqingang/domain/error"
 )
 
 // Configs 全局配置信息
